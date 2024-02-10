@@ -10,9 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@faker-js/faker": "^8.4.1",
     "cypress": "^13.6.4",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "faker": "^6.6.6"
+    "faker": "^5.5.3"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/support/steps/*/*.{js,ts}",

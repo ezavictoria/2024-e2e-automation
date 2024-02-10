@@ -8,14 +8,18 @@ class singUpElements {
         return '#signInModalLabel'
     }
 
-    singUsernameField = () => {
+    singUpUsernameField = () => {
         return '#sign-username'
     }
 
-    singPasswordField = () => {
+    singUpPasswordField = () => {
         return '#sign-password'
     }
 
+    singUpConfirmBtn = () => {
+        return 'button[onclick="register()"]'
+    }
+    
 }
 
 export default singUpElements;

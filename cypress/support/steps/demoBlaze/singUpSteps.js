@@ -14,20 +14,24 @@ Given("the user accesses the DemoBlaze homepage", () => {
 
 Given("clicks on the sing up link", () => {
   cy.get(SingUpElements.singUpLinkHeader()).click()
-  cy.get(SingUpElements.singUpModalLabel()).should("be.visible")
+  cy.get(SingUpElements.singUpModalLabel()).should('be.visible')
 });
 
 When("fills in the form fields", () => {
-  const usernameRandom = faker.name.firstName()
+  const usernameRandom = faker.internet.userName()
   const passwordRandom = faker.internet.password()
 
-  cy.get(SingUpElements.singUsernameField()).type(usernameRandom, { log: false })
-  cy.get(SingUpElements.singPasswordField()).type(passwordRandom, { log: false })
+  cy.get(SingUpElements.singUpUsernameField()).type(usernameRandom, { log: false })
+  cy.get(SingUpElements.singUpPasswordField()).type(passwordRandom, { log: false })
 
   Cypress.env('username', usernameRandom)
-  Cypress.env('password', passwordRandomRandom)
+  Cypress.env('password', passwordRandom)
 });
 
 When("clicks on the sing up button", () => {
-  cy.contains('button', 'Sing Up').click()
+  cy.get(SingUpElements.singUpConfirmBtn()).click()
+});
+
+Then("the user should be redirect to the home page", () => {
+  cy.get(CommonElements.dbLogoHeader()).should('be.visible')
 });
