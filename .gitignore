@@ -1,0 +1,16 @@
+*-report/
+node_modules/
+.DS_Store
+videos/
+downloads/
+screenshots/
+cypress/cucumber-html-report.js
+cypress/cucumber-json/
+reports/
+cypress.env.json
+
+### Web Storm ###
+.idea/*
+
+### VisualStudioCode ###
+.vscode/*
