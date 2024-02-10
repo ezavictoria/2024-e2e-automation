@@ -32,6 +32,7 @@ When("clicks on the sing up button", () => {
   cy.get(SingUpElements.singUpConfirmBtn()).click()
 });
 
-Then("the user should be redirect to the home page", () => {
+Then("the sign up must be successful", () => {
+  cy.validateAlert('Sign up successful.')
   cy.get(CommonElements.dbLogoHeader()).should('be.visible')
 });
