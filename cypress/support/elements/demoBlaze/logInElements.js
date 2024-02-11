@@ -17,7 +17,7 @@ class logInElements {
     }
 
     logInConfirmBtn = () => {
-        return 'button[onclick="logIn()"'
+        return 'button[onclick="logIn()"]'
     }
     
 }

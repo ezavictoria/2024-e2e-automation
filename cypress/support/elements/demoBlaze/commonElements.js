@@ -11,6 +11,11 @@ class commonElements {
     dbNameUserHeader = () => {
         return '#nameofuser'
     }
+
+    dbContactHeader = () => {
+        return 'a[data-target="#exampleModal"]'
+    }
+
 }
 
 export default commonElements;
