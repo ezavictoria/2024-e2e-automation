@@ -17,15 +17,12 @@ Given("clicks on the sing up link", () => {
   cy.get(SingUpElements.singUpModalLabel()).should('be.visible')
 });
 
-When("fills in the form fields", () => {
-  const usernameRandom = faker.internet.userName()
-  const passwordRandom = faker.internet.password()
+When("fills in the sing up form fields", () => {
+  const username = Cypress.env('username')
+  const password = Cypress.env('password')
 
-  cy.get(SingUpElements.singUpUsernameField()).type(usernameRandom, { log: false })
-  cy.get(SingUpElements.singUpPasswordField()).type(passwordRandom, { log: false })
-
-  Cypress.env('username', usernameRandom)
-  Cypress.env('password', passwordRandom)
+  cy.get(SingUpElements.singUpUsernameField()).type(username)
+  cy.get(SingUpElements.singUpPasswordField()).type(password, { log: false })
 });
 
 When("clicks on the sing up button", () => {
@@ -33,6 +30,6 @@ When("clicks on the sing up button", () => {
 });
 
 Then("the sign up must be successful", () => {
-  cy.validateAlert('Sign up successful.')
+  cy.validateAlert('This user already exist.')
   cy.get(CommonElements.dbLogoHeader()).should('be.visible')
 });

@@ -7,6 +7,10 @@ class commonElements {
     dbLogoHeader = () => {
         return '#nava'
     }
+
+    dbNameUserHeader = () => {
+        return '#nameofuser'
+    }
 }
 
 export default commonElements;
