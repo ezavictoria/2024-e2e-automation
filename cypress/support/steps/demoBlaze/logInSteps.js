@@ -6,8 +6,6 @@ const CommonElements = new commonElements()
 import logInElements from "../../elements/demoBlaze/logInElements";
 const LogInElements = new logInElements()
 
-const faker = require('faker')
-
 Given("clicks on the log in link", () => {
   cy.get(LogInElements.logInLinkHeader()).click()
   cy.get(LogInElements.logInModalLabel()).should('be.visible')

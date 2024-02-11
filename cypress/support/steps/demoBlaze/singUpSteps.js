@@ -6,8 +6,6 @@ const CommonElements = new commonElements()
 import singUpElements from "../../elements/demoBlaze/singUpElements";
 const SingUpElements = new singUpElements()
 
-const faker = require('faker')
-
 Given("the user accesses the DemoBlaze homepage", () => {
   cy.visit(CommonElements.dbHomePageUrl())
 });
