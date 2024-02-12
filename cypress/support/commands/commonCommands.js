@@ -4,5 +4,13 @@ Cypress.Commands.add('validateAlert', (message) => {
       })
   })
 
+Cypress.Commands.add('getTextLast', (element, textLabel) => {
+  cy.get(element)
+    .invoke('text')
+    .then(text => {
+      Cypress.env(textLabel, text)
+    })
+});
+
   
   
