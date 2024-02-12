@@ -16,6 +16,10 @@ class commonElements {
         return 'a[data-target="#exampleModal"]'
     }
 
+    dbCartHeader = () => {
+        return '#cartur'
+    }
+
 }
 
 export default commonElements;
